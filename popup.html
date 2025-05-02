@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Square to Doc</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .input-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+    #status {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 4px;
+      display: none;
+    }
+    .success {
+      background-color: #dff0d8;
+      color: #3c763d;
+    }
+    .error {
+      background-color: #f2dede;
+      color: #a94442;
+    }
+  </style>
+</head>
+<body>
+  <div class="input-group">
+    <label for="squareUrl">Square Base URL:</label>
+    <input type="text" id="squareUrl" value="https://square.base.vn/stack/8?topic=598">
+  </div>
+  <div class="input-group">
+    <label for="docUrl">Google Doc URL:</label>
+    <input type="text" id="docUrl" value="https://docs.google.com/document/d/1dHIBGx_2J8epNvGZcuBuTvhhSKp1mZKu-sPAPcd8La8/edit?tab=t.0">
+  </div>
+  <button id="crawlButton">Crawl and Save to Doc</button>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html> 
